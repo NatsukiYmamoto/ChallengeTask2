@@ -7,23 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet private weak var textField1: UITextField!
     
-    @IBOutlet weak var textField2: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
-    @IBOutlet weak var calculateButton: NSLayoutConstraint!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     //UISegmentedControlの計算の処理
     @IBAction func calculateButtonPress(_ sender: Any) {
         let num1 = Double(textField1.text ?? "") ?? 0
@@ -37,14 +30,13 @@ class ViewController: UIViewController {
         case 2:
             resultLabel.text = String(num1 * num2)
         case 3:
-            if (num1 / num2).isInfinite{
+            if (num1 / num2).isInfinite {
                 resultLabel.text = "0では割れません"
             } else {
                 resultLabel.text = String(num1 / num2)
             }
         default:
             resultLabel.text = "NONE"
-            
         }
     }
 }

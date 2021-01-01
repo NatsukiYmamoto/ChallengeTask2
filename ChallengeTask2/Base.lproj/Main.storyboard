@@ -73,7 +73,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calculateButton" destination="6FM-FB-IN2" id="TY5-p9-gok"/>
                         <outlet property="resultLabel" destination="oO1-Ps-Fcx" id="9ax-Zr-FvF"/>
                         <outlet property="segmentedControl" destination="7KZ-sG-kuD" id="RhQ-UR-f7I"/>
                         <outlet property="textField1" destination="Uwu-qU-YTF" id="KyQ-kG-8GB"/>
