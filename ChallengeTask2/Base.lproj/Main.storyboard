@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChallengeTask2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-qU-YTF">
+                                <rect key="frame" x="147" y="194" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2IW-NY-BgU"/>
+                                    <constraint firstAttribute="width" constant="120" id="2u8-H3-VRp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiG-8s-G47">
+                                <rect key="frame" x="147" y="278" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="A2m-43-TG1"/>
+                                    <constraint firstAttribute="height" constant="34" id="oP0-6M-7ZC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-sG-kuD">
+                                <rect key="frame" x="151.5" y="342" width="111" height="32"/>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                    <segment title="×"/>
+                                    <segment title="÷"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-Ps-Fcx">
+                                <rect key="frame" x="189.5" y="439" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWU-1u-6BV">
+                                <rect key="frame" x="176" y="513" width="62" height="30"/>
+                                <state key="normal" title="計算する"/>
+                                <connections>
+                                    <action selector="calculateButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNp-dk-46Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qWU-1u-6BV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6FM-FB-IN2"/>
+                            <constraint firstItem="qWU-1u-6BV" firstAttribute="top" secondItem="oO1-Ps-Fcx" secondAttribute="bottom" constant="53" id="7Qm-oK-n7R"/>
+                            <constraint firstItem="oO1-Ps-Fcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DaO-mM-Bzm"/>
+                            <constraint firstItem="7KZ-sG-kuD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DcA-6k-SU0"/>
+                            <constraint firstItem="oO1-Ps-Fcx" firstAttribute="top" secondItem="7KZ-sG-kuD" secondAttribute="bottom" constant="66" id="ViC-6e-e5M"/>
+                            <constraint firstItem="7KZ-sG-kuD" firstAttribute="top" secondItem="GiG-8s-G47" secondAttribute="bottom" constant="30" id="b9O-Zz-bIx"/>
+                            <constraint firstItem="Uwu-qU-YTF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="boR-dE-CCo"/>
+                            <constraint firstItem="Uwu-qU-YTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dx6-an-PVd"/>
+                            <constraint firstItem="GiG-8s-G47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oQC-hM-jXt"/>
+                            <constraint firstItem="GiG-8s-G47" firstAttribute="top" secondItem="Uwu-qU-YTF" secondAttribute="bottom" constant="50" id="zbl-kH-dZL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="6FM-FB-IN2" id="TY5-p9-gok"/>
+                        <outlet property="resultLabel" destination="oO1-Ps-Fcx" id="9ax-Zr-FvF"/>
+                        <outlet property="segmentedControl" destination="7KZ-sG-kuD" id="RhQ-UR-f7I"/>
+                        <outlet property="textField1" destination="Uwu-qU-YTF" id="KyQ-kG-8GB"/>
+                        <outlet property="textField2" destination="GiG-8s-G47" id="wrj-ZX-y3A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
